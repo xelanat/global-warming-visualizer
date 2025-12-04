@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Global Warming Visualizer</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main class="container">
+            <h1>
+                Global Warming Visualizer
+            </h1>
+
+            <p>Berkeley Earth produces a monthly global temperature analysis (e.g. <a href="https://berkeleyearth.org/october-2025-temperature-update/">October 2025 Temperature Update</a>), and this visualizer enables a sequential, interactive view of the data over time.</p>
+
+            <p>
+                We're only displaying Spatial Variation relative to 1951-1980 average at this time.
+            </p>
+
+            <p><i><b>Note:</b> Scale varies between images.</i></p>
+
+            <br />
+            
+			<section class="visualizer">
+				<div class="canvas-wrapper">
+					<img id="frameImage" alt="frame" src="" />
+					<div id="loading" class="loading">Loading…</div>
+				</div>
+
+				<div class="controls">
+					<input id="frameRange" type="range" min="0" max="0" value="0" step="1" />
+					<div class="control-row">
+						<button id="prevBtn" title="Previous frame">◀</button>
+						<span id="frameLabel">Frame 0 / 0</span>
+						<button id="nextBtn" title="Next frame">▶</button>
+					</div>
+				</div>
+
+                <p class="help">Controls: drag the slider, use ◀/▶ buttons, or press left/right arrows. Toggle Play to auto-advance (configurable speed in code).</p>
+			</section>
+		</main>
+
+
+        <footer>
+            <p><a href="https://github.com/xelanat/global-warming-visualizer"><img src="github-mark/github-mark.svg" alt="GitHub" width="15" height="15"/> Github</a></p>
+                <p style="margin-top:0.5em;">
+                    <small>
+                    Data and images &copy; Berkeley Earth, licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0 International</a> for non-commercial use only.<br />
+                    Attribution: Berkeley Earth (<a href="https://www.berkeleyearth.org" target="_blank">www.berkeleyearth.org</a>)<br />
+                    </small>
+                </p>
+            </footer>
+
+		<script src="main.js"></script>
+	</body>
+</html>
